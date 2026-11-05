@@ -1,4 +1,3 @@
-
 import { defineConfig } from "vite";
 
 export default defineConfig({
@@ -7,13 +6,15 @@ export default defineConfig({
         target: "node20",
 
         lib: {
-            entry: "src/index.js",
+            entry: {
+                index: "src/index.js",
+                client: "src/client/index.js"
+            },
             formats: ["es", "cjs"],
 
-            fileName: (format) => {
-                return format === "es"
-                    ? "index.js"
-                    : "index.cjs";
+            fileName: (format, entryName) => {
+                const ext = format === "es" ? ".js" : ".cjs";
+                return `${entryName}${ext}`;
             }
         },
 
@@ -22,7 +23,16 @@ export default defineConfig({
                 "express",
                 "@napi-rs/canvas",
                 "node:crypto"
-            ]
+            ],
+            output: {
+                exports: "named",
+                assetFileNames: (assetInfo) => {
+                    if (assetInfo.name && assetInfo.name.endsWith(".css")) {
+                        return "client.css";
+                    }
+                    return "[name].[ext]";
+                }
+            }
         }
     }
 });

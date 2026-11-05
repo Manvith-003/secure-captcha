@@ -1,7 +1,7 @@
 {
   "name": "@manvith-003/secure-captcha",
   "version": "0.1.0",
-  "description": "Reusable numeric image CAPTCHA library for Node.js and Express applications",
+  "description": "Reusable numeric image CAPTCHA library for Node.js and Express applications with client widget",
   "type": "module",
   "license": "MIT",
   "author": "",
@@ -19,7 +19,12 @@
     ".": {
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
-    }
+    },
+    "./client": {
+      "import": "./dist/client.js",
+      "require": "./dist/client.cjs"
+    },
+    "./client/css": "./dist/client.css"
   },
   "files": [
     "dist",
