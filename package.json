@@ -1,6 +1,6 @@
 {
   "name": "@manvith-003/secure-captcha",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Reusable numeric image CAPTCHA library for Node.js and Express applications with client widget",
   "type": "module",
   "license": "MIT",
