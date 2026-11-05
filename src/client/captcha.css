@@ -1,0 +1,132 @@
+
+.secure-captcha {
+    width: 280px;
+    padding: 20px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    background: #ffffff;
+    color: #172033;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.secure-captcha * {
+    box-sizing: border-box;
+}
+
+.captcha-title {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+
+.captcha-subtitle {
+    display: block;
+    margin-top: 5px;
+    color: #64748b;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.captcha-image-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.captcha-image {
+    width: 200px;
+    height: 65px;
+    object-fit: contain;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    background: #f5f7fa;
+}
+
+.captcha-refresh {
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 7px;
+    background: #eff6ff;
+    color: #2563eb;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.captcha-refresh:hover {
+    background: #dbeafe;
+}
+
+.captcha-input {
+    width: 100%;
+    height: 42px;
+    padding: 10px;
+    margin-top: 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    outline: none;
+    font-size: 15px;
+}
+
+.captcha-input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.12);
+}
+
+.captcha-verify {
+    width: 100%;
+    height: 42px;
+    margin-top: 12px;
+    border: none;
+    border-radius: 7px;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.captcha-verify:hover {
+    background: #1d4ed8;
+}
+
+.captcha-verify:disabled,
+.captcha-refresh:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.captcha-message {
+    min-height: 18px;
+    margin: 12px 0 0;
+    font-size: 12px;
+    color: #64748b;
+}
+
+.captcha-message.success {
+    color: #15803d;
+}
+
+.captcha-message.error {
+    color: #dc2626;
+}
+
+/* Dark theme */
+
+.secure-captcha.dark {
+    background: #172033;
+    color: #ffffff;
+    border-color: #334155;
+}
+
+.secure-captcha.dark .captcha-subtitle,
+.secure-captcha.dark .captcha-message {
+    color: #cbd5e1;
+}
+
+.secure-captcha.dark .captcha-input {
+    background: #1e293b;
+    color: #ffffff;
+    border-color: #475569;
+}
