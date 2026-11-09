@@ -1,6 +1,6 @@
 {
   "name": "@manvith-003/secure-captcha",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Reusable numeric image CAPTCHA library for Node.js and Express applications with client widget",
   "type": "module",
   "license": "MIT",
@@ -53,5 +53,13 @@
   },
   "engines": {
     "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/manvith-003/secure-captcha.git"
+  },
+  "homepage": "https://github.com/manvith-003/secure-captcha#readme",
+  "bugs": {
+    "url": "https://github.com/manvith-003/secure-captcha/issues"
   }
 }
